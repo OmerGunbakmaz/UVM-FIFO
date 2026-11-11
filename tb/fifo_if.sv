@@ -23,11 +23,11 @@ interface fifo_if #(
 
     clocking mon_cb @(posedge clk);
         default input #1step;
-        input wr_en, rd_en, wdata, full, empty, rdata;
+        input rst_n,wr_en, rd_en, wdata, full, empty, rdata;
     endclocking
 
     modport DRV(clocking drv_cb, output rst_n);
-    modport MON(clocking mon_cb, input rst_n);
+    modport MON(clocking mon_cb);
 
     task do_reset();
         rst_n = 0;

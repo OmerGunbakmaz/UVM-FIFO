@@ -25,4 +25,20 @@ class fifo_item extends uvm_sequence_item;
         );
     endfunction
 
+    function void do_copy(uvm_object rhs);
+        fifo_item RHS;
+        if(rhs== null)
+            `uvm_fatal("FIFO_ITEM","Tried to copy a null object");
+        if(!$cast(RHS,rhs))
+            `uvm_fatal("FIFO_ITEM","Failed casting");
+        super.do_copy(rhs);
+        wr_en   =RHS.wr_en;
+        rd_en   =RHS.rd_en;
+        wdata   =RHS.wdata;
+        rdata   =RHS.rdata;
+        full    =RHS.full;
+        empty   =RHS.empty;
+    endfunction
+
+
 endclass
