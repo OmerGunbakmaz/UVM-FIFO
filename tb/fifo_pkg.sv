@@ -2,6 +2,7 @@ package fifo_pkg;
     import uvm_pkg::*;
     `include "uvm_macros.svh"
     parameter int FIFO_WIDTH = 8;
+    parameter int FIFO_DEPTH = 8;
 
     `include "fifo_item.svh"
     typedef uvm_sequencer#(fifo_item) fifo_sequencer;

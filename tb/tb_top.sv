@@ -9,7 +9,7 @@ module tb_top;
         clk = 0;
         forever #5 clk = ~clk;
     end
-    fifo_if #(.WIDTH(fifo_pkg::FIFO_WIDTH)) vif (.clk(clk));
+    fifo_if #(.WIDTH(fifo_pkg::FIFO_WIDTH,fifo_pkg::FIFO_DEPTH)) vif (.clk(clk));
 
     initial begin
         uvm_config_db#(virtual fifo_if)::set(null, "*", "vif", vif);
