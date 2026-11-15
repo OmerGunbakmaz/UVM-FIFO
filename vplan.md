@@ -51,7 +51,7 @@ One covergroup, sampled **every clock cycle** after reset (not only on accepted 
 
 | Test | Stimulus | Mainly covers |
 |---|---|---|
-| `fifo_base_test` | 5 writes, then 5 reads | smoke, F1, F2, F7 |
+| `fifo_basic_test` | 5 writes, then 5 reads | smoke, F1, F2, F7 |
 | `fifo_fill_drain_test` | Write until full plus a few extra, then read until empty plus a few extra | F3–F6, F11, F12 |
 | `fifo_rw_test` | Continuous simultaneous read/write at different fill levels | F8–F10 |
 | `fifo_random_test` | Random `wr_en`, `rd_en`, `wdata` over many cycles | everything, coverage closure |
