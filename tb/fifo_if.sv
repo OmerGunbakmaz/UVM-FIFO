@@ -1,7 +1,6 @@
 interface fifo_if #(
-    parameter int WIDTH = 8,
-    parameter int DEPTH = 8
-) (
+    parameter int WIDTH = 8
+    ) (
     input logic clk
 );
 

@@ -1,4 +1,7 @@
 `timescale 1ns / 1ps
+`include "fifo_if.sv"//for eda playground
+`include "fifo_pkg.sv"//for eda playground
+
 module tb_top;
     import uvm_pkg::*;
     import fifo_pkg::*;
@@ -9,7 +12,7 @@ module tb_top;
         clk = 0;
         forever #5 clk = ~clk;
     end
-    fifo_if #(.WIDTH(fifo_pkg::FIFO_WIDTH,fifo_pkg::FIFO_DEPTH)) vif (.clk(clk));
+    fifo_if #(.WIDTH(fifo_pkg::FIFO_WIDTH)) vif (.clk(clk));
 
     initial begin
         uvm_config_db#(virtual fifo_if)::set(null, "*", "vif", vif);

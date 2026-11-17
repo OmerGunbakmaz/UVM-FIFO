@@ -11,12 +11,14 @@ package fifo_pkg;
     } operation_t;
 
     `include "fifo_item.svh"
+    `include "fifo_wr_heavy_item.svh"
     typedef uvm_sequencer#(fifo_item) fifo_sequencer;
 
     `include "fifo_base_seq.svh"
     `include "fifo_basic_seq.svh"
     `include "fifo_fill_drain_seq.svh"
     `include "fifo_rw_seq.svh"
+    `include "fifo_random_seq.svh"
     `include "fifo_driver.svh"
     `include "fifo_monitor.svh"
     `include "fifo_agent_config.svh"
@@ -29,5 +31,7 @@ package fifo_pkg;
     `include "fifo_basic_test.svh"
     `include "fifo_fill_drain_test.svh"
     `include "fifo_rw_test.svh"
+    `include "fifo_random_test.svh"
+    `include "fifo_override_test.svh"
 
 endpackage : fifo_pkg
