@@ -34,6 +34,16 @@ flowchart LR
     IF -- "mon_cb" --> MON
     MON -- "analysis port" --> SCB
     MON -- "analysis port" --> COV
+
+    classDef comp fill:#ffffff,stroke:#475569,color:#1e293b
+    classDef dut fill:#fef3c7,stroke:#d97706,color:#1e293b
+    class SEQ,SQR,DRV,MON,SCB,COV,IF comp
+    class DUT dut
+
+    style TEST fill:#eef2ff,stroke:#6366f1,color:#1e293b
+    style ENV fill:#ecfdf5,stroke:#10b981,color:#1e293b
+    style AGENT fill:#fff7ed,stroke:#f97316,color:#1e293b
+    style TOP fill:#f1f5f9,stroke:#64748b,color:#1e293b
 ```
 
 ## Results
