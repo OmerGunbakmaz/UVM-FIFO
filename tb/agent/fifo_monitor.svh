@@ -1,5 +1,5 @@
 class fifo_monitor extends uvm_monitor;
-    `uvm_component_utils(fifo_monitor);
+    `uvm_component_utils(fifo_monitor)
     virtual fifo_if vif;
 
     uvm_analysis_port #(fifo_item) ap;

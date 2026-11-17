@@ -1,5 +1,5 @@
 class fifo_random_test extends fifo_base_test;
-    `uvm_component_utils(fifo_random_test);
+    `uvm_component_utils(fifo_random_test)
 
     function void build_phase(uvm_phase phase);
         fifo_base_seq::type_id::set_type_override(fifo_random_seq::get_type());

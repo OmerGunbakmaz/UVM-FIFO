@@ -1,5 +1,5 @@
 class fifo_agent extends uvm_agent;
-    `uvm_component_utils(fifo_agent);
+    `uvm_component_utils(fifo_agent)
 
     fifo_agent_config agent_config_h;
 

@@ -1,5 +1,5 @@
 class fifo_basic_seq extends fifo_base_seq;
-    `uvm_object_utils(fifo_basic_seq);
+    `uvm_object_utils(fifo_basic_seq)
 
     function new(string name = "fifo_basic_seq");
         super.new(name);

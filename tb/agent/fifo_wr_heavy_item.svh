@@ -1,6 +1,6 @@
 class fifo_wr_heavy_item extends fifo_item;
 
-    `uvm_object_utils(fifo_wr_heavy_item);
+    `uvm_object_utils(fifo_wr_heavy_item)
 
     constraint c_wr_heavy {
         wr_en dist {

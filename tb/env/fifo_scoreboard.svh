@@ -1,5 +1,5 @@
 class fifo_scoreboard extends uvm_subscriber #(fifo_item);
-    `uvm_component_utils(fifo_scoreboard);
+    `uvm_component_utils(fifo_scoreboard)
     bit [FIFO_WIDTH-1:0]    model_q [$];
     int n_writes,n_reads,n_pass,n_fail;
 

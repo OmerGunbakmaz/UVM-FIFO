@@ -1,5 +1,5 @@
 class fifo_env extends uvm_env;
-    `uvm_component_utils(fifo_env);
+    `uvm_component_utils(fifo_env)
     fifo_agent agent_h;
     fifo_agent_config agent_config_h;
 

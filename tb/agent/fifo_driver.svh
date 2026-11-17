@@ -1,6 +1,6 @@
 class fifo_driver extends uvm_driver #(fifo_item);
 
-    `uvm_component_utils(fifo_driver);
+    `uvm_component_utils(fifo_driver)
     virtual fifo_if vif;
 
     task run_phase(uvm_phase phase);
