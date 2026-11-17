@@ -46,6 +46,12 @@ flowchart LR
     style TOP fill:#2b2f36,stroke:#6b7280,color:#e5e7eb
 ```
 
+## Design notes
+
+- **Monitor** publishes every cycle one cycle late, because `rdata` is registered.
+- **Scoreboard** decides accept/reject with its own model, not the DUT flags, so flag bugs are caught.
+- **Tests** share one base test; each test picks its sequence with a factory override.
+
 ## Results
 
 | Test | Functional coverage | Scoreboard |
